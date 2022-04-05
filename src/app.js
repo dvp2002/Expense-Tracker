@@ -3,7 +3,6 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const app = express();
 const Cookies = require("js-cookie");
-const lunchToken = "526dece47e719c2bf0b5e4713b81f829e5231d0b73edf90221";
 
 //middleware
 
