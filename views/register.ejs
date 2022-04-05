@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/styler.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container" style="overflow-y: auto;">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Register</span>
+                <div class="login-signup">
+                    <span class="text">
+                        Instructions for Registering :- <br>
+                        1. Username can be your name/alias and must be atleast 5 characters in length.<br>
+                        2. Password must be atleast 8 characters in length and must include a special character as well as a number[0-9].
+                    </span>
+                </div>
+
+                <form action="/register" method="POST">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your Username" name="name" id="name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                
+                    <div class="input-field">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+        
+                    <div class="input-field">
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    
+                    <div class="input-field button">
+                        <input type="submit" value="Register Now" onclick="onSubmit()">
+                    </div>
+                    </form>
+                
+                    <div class="login-signup">
+                        <span class="text">Already a member?
+                            <a href="/login" class="text signup-link">Login now!</a>
+                        </span>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var al = "<%= danger %>";
+        if(al !== '')
+        alert(al);
+    </script>
+</body>
+</html>

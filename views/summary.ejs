@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="css/summary.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="/images/logo.png" alt="" />
+          </a>
+        </div>
+
+        <div class="links">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/addexp">Add an Expense</a>
+            </li>
+            <li>
+              <a href="/tracker">Start Tracking</a>
+            </li>
+            <li>
+              <a href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<div class="exp">
+  <div class="contain">
+    <h2>Summary Of Expenses</h2><br>
+    <h4>Your Balance :</h4>
+    <h1 id="balance">₹<%= bal %></h1>
+
+    <div class="inc-exp-container">
+      <div>
+        <h4>Income</h4>
+        <p id="money-plus" class="money plus">₹<%= pos %></p>
+      </div>
+      <div>
+        <h4>Expense</h4>
+        <p id="money-minus" class="money minus">₹<%= neg %></p>
+      </div>
+    </div>
+  </div>
+  <h3>Charts and Graphs Coming Soon!</h3>
+</div>
+</body>
+
+</html>

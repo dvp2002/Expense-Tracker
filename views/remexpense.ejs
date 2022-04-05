@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/nav.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete an Expense</title>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.png" alt="" />
+                    </a>
+                </div>
+
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/addexp">Add an Expense</a>
+                        </li>
+                        <li>
+                            <a href="/tracker">Start Tracking</a>
+                        </li>
+                        <li>
+                            <a href="/summary">View Summary</a>
+                        </li>
+                        <li>
+                            <a href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="trans" style="align-items: center; text-align: center;">
+        <h1>Delete an Expense</h1>
+    <h3>Enter your unique Transaction Id, which was displayed earlier on the "Start Tracking" page.</h3>
+        <form action="/remexp" method="POST">
+        <input type="text" id="idtrans" name="idtrans" autocomplete="off" style="margin-top: 20px; width: 300px; height: 40px; font-size: medium;" required>
+        <input class="btn2-grad1" style="text-align: center;" type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <script type="text/javascript">
+        var al = "<%= danger %>";
+        if (al !== '')
+          alert(al);
+      </script>
+</body>
+</html>

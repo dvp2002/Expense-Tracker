@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/track.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.png" alt="" />
+                    </a>
+                </div>
+
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/addexp">Add an Expense</a>
+                        </li>
+                        <li>
+                            <a href="/summary">View Summary</a>
+                        </li>
+                        <li>
+                            <a href="/remexp">Delete an Expense</a>
+                        </li>
+                        <li>
+                            <a href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="shift">
+        <h1 class="headtext" style="margin-top: 30px; margin-bottom: 50px;">Expense Tracker</h1>
+        <h3 class="headtextp" style="margin-top: 80px; margin-bottom: 60px;">Welcome <%=user%>!
+                <h3>
+                    <% if(records.length> 0) { %>
+                        <% records.forEach(att=> { %>
+                            <button type="button" class="collapsible" style="margin-bottom: 10px;">View Income/Expense of Amount: ₹<%= att.amount %>
+                                    </button>
+                            <div class="content" style="margin-bottom: 10px;">
+                                <% if(att.amount >= 0) { %>
+                                    <p>Income in the Transaction :₹<%= att.amount %>
+                                    </p>
+                                    <% }else{ %>
+                                        <p>Expense in the Transaction :₹<%= att.amount %>
+                                        </p>
+                                        <% } %>
+                                            <p>Category in which the Transaction occurred :<%= att.category %>
+                                            </p>
+                                            <p>Description of the Transaction :<%= att.description %>
+                                            </p>
+                                            <p>Id of the Transaction :<%= att.id %>
+                                            </p>
+                            </div>
+                            <% }) %>
+                                <% }else{ %>
+                                    <p>No Expense Record Found</p>
+                                    <% } %>
+    </div>
+    <div class="image">
+        <img src="/images/ExpenseTracker.jpg" alt="Track Expenses" style="border-radius: 15%; object-fit: contain; width: 500px; height: 500px;">
+    </div>
+
+    <script type="text/javascript">
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        var al = "<%= danger %>";
+        if (al !== '')
+            alert(al);
+    </script>
+</body>
+
+</html>

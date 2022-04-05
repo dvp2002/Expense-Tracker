@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="css/add.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add an Expense</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="/images/logo.png" alt="" />
+          </a>
+        </div>
+
+        <div class="links">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/tracker">Start Tracking</a>
+            </li>
+            <li>
+              <a href="/summary">View Summary</a>
+            </li>
+            <li>
+              <a href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="cont">
+    <div class="form-style-3">
+      <form action="/addexp" method="POST">
+        <fieldset>
+          <legend>Add an Expense</legend>
+          <span>Enter a Positive Amount for an Income and a Negative Amount for an Expense.</span><br>
+          <label for="field1"><span>Amount <span class="required">*</span></span>
+            <input type="text" class="input-field" name="amt" id="amt" placeholder="Enter your amount in Rs."
+              required /></label>
+          <label for="field4"><span>Category</span>
+            <select name="category" id="category" class="select-field">
+              <option value="Bills">Bills</option>
+              <option value="Food">Food</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Gift">Gift</option>
+              <option value="Investments">Investments</option>
+              <option value="Housing">Housing</option>
+              <option value="Transportation">Transportation</option>
+              <option value="Others">Others</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Description</legend>
+          <label for="field6"><span>Description <span class="required">*</span></span>
+            <textarea name="desc" id="desc" class="textarea-field" placeholder="Add a description"
+              required></textarea></label>
+          <label><span> </span>
+            <input type="submit" value="Submit" /></label>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var al = "<%= danger %>";
+    if (al !== '')
+      alert(al);
+  </script>
+</body>
+
+</html>

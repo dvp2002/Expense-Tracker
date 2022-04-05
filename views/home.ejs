@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs'); %>
+    <div class="cont">
+        <p class="animated bounce delay-.2s" style="float: left; margin-right: 20px; margin-bottom: 30px;"><img src="/images/Login.jpg" height="350px" width="350px" alt="Invest Smartly"></p>
+        <h2 class="animated flip delay-.3s" style="margin-bottom: 10px;">Keeping Track Of your Expenses Is Now Easier Than Ever!</h2>
+        <p class="animated fadeInRight delay-.4s" style="margin-bottom: 20px;">Login or Register now to keep a track of your magnificent monetary journeys in life.</p>
+        <a href="/login">
+            <button class="btn-grad">Login</button>
+        </a>
+        <a href="/register">
+            <button class="btn-grad">Register</button>
+        </a>
+    </div>
+    <hr />
+    <div class="cont" style="clear: left;">
+        <p class="wow bounce" style="float: right; margin-right: 20px; margin-bottom: 30px;"><img src="/images/Invest.jpg" height="350px" width="350px" alt="Invest Smartly"></p>
+        <h2 class="animated flip delay-.3s" style="margin-bottom: 10px;">Helping You In Investing Smartly!</h2>
+        <p class="animated fadeInRight delay-.4s" style="margin-bottom: 20px;">Expense Tracking is a niche way to stay updated and adjust your budgets accordingly.</p>
+        <a href="/tracker">
+            <button class="btn2-grad">Start Tracking</button>
+        </a>
+    </div>
+    <hr />
+    <div class="cont" style="clear: both; margin-bottom: 25px;">
+        <h1 class="wow tada" style="text-align: center; margin-bottom: 20px; overflow-y: hidden; overflow: -moz-hidden-unscrollable;">Why Choose Expense Tracker?</h1>
+    </div>
+    <div class="features-wrapper" style="margin-bottom: 10px;">
+            <div class="feature-content" style="width: 33%; max-width: 33%; margin-right: 20px; text-align: center;">
+                <p class="wow fadeInDown"><img src="/images/Manage.png" style="align-items: center; margin-bottom: 10px; border-radius: 5%;"></p>
+                <h2 class="wow fadeInUp" style="color: aliceblue; margin-bottom: 35px;">Hassle-free Management Of All Your Expenses!</h2>
+                <h5 class="wow fadeInUp" style="color: antiquewhite;">Keeping up with daily expenses is a problem that needn't worry you anymore! We all know that keeping tabs on expenses is a tedious task and mixups can often happen, that is the reason why user integrated expenses become more important, which is exactly what we offer!</h5>
+            </div>
+            <div class="feature-content" style="width: 33%; max-width: 33%;  margin-right: 20px; text-align: center;">
+                <p class="wow fadeInDown"><img src="/images/Tabs.png" style="align-items: center; margin-bottom: 10px; border-radius: 5%; height: 250px; width: 325px;"></p>
+                <h2 class="wow fadeInUp" style="color: aliceblue; margin-bottom: 35px;">One Management System To Rule Them All!</h2>
+                <h5 class="wow fadeInUp" style="color: antiquewhite;">Summarize all of your expenses within one precise and effective system to help keep track of your budgets and enable fruitful and smart investments, its as simple as a click of a button! As technology prospers, so should you.</h5>
+            </div>
+            <div class="feature-content" style="width: 33%; max-width: 33%;  margin-right: 20px; text-align: center;">
+                <p class="wow fadeInDown"><img src="/images/Categories.png" style="align-items: center; margin-bottom: 10px; border-radius: 5%; height: 250px; width: 385px;"></p>
+                <h2 class="wow fadeInUp" style="color: aliceblue; margin-bottom: 35px;">Smart Tracking Of Expenses In Various Categories!</h2>
+                <h5 class="wow fadeInUp" style="color: antiquewhite;">It's quite frustrating to keep tracking expenses if they're spread over a wide range of categories. Now if a person knows how much he/she spends and for what, it becomes easier to analyse where to cut unnecessary spendings.</h5>
+            </div>
+    </div>
+    <div class="footer">
+        <h5>© 2022 Dev Vrat Pandey</h5>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+    new WOW().init();
+    </script>
+</html>
