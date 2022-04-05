@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const { OAuth2Client } = require('google-auth-library');
-const CLIENT_ID = '656347660357-56t8m10mhg53gvs9cap9ttrtgp410diq.apps.googleusercontent.com';
+const CLIENT_ID = '656347660357-ii242safgbntfafh1qnrrj3djg11pn9q.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 
 
