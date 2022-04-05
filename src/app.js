@@ -123,7 +123,7 @@ app.get('/google', (req, res) => {
     console.log("google connected");
 })
 
-app.post('/google', (req, res) => {
+app.post('/google', async(req, res) => {
     let token = req.body.token;
 
     async function verify() {
