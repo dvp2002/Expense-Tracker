@@ -18,7 +18,7 @@ Languages Used :-
 
 Tech Stack Used :-
 1) MongoDB
-2) Express.js
+2) JavaScript
 3) HTML/CSS - EJS
 4) Node.js
 
